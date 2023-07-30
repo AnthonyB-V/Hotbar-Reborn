@@ -1,0 +1,23 @@
+# Project exclude paths
+
+.factorypath
+.idea
+*.iml
+*.ipr
+*.iws
+
+.gradle
+
+bin/
+build/
+jars/
+out/
+classes/
+
+**/src/generated/*
+
+run
+*.log
+
+*.db
+$RECYCLE.BIN/
