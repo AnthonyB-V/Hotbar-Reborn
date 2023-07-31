@@ -1,0 +1,18 @@
+{
+  "key.hotbarreborn.openSettings": "Open Settings Menu",
+  "category.hotbarreborn.hotbarreborn": "Hotbar Reborn",
+  "title.hotbarreborn.config": "Hotbar Reborn Options",
+  "category.hotbarreborn.hotbar": "Hotbar",
+  "option.hotbarreborn.globalenabled": "Global Enabled",
+  "tooltip.hotbarreborn.globalenabled": "Whether any of the mods features work",
+  "option.hotbarreborn.xoffhot": "X Offset",
+  "tooltip.hotbarreborn.xoffhot": "Modifies the X-Value of the hotbar",
+  "option.hotbarreborn.ysubhot": "Y Oubtract",
+  "tooltip.hotbarreborn.ysubhot": "Subtracts from the Y-Value (makes it go up)",
+  "option.hotbarreborn.showHotBack": "Show Background",
+  "tooltip.hotbarreborn.showHotBack": "Whether to show the background of the hotbar",
+  "option.hotbarreborn.showHotSel": "Show Selected Stem Sndicator",
+  "tooltip.hotbarreborn.showHotSel": "Whether to show the selected item indicator",
+  "option.hotbarreborn.animSel": "Animate Selected Item Indicator",
+  "tooltip.hotbarreborn.animSel": "Whether to animate the selected item indicator's movement"
+}

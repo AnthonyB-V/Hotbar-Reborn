@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "hotbarreborn",
-	"version": "${version}",
+	"version": "Alpha 1.0",
 	"name": "Hotbar Reborn",
 	"description": "Hotbar, reborn.",
 	"authors": [
@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/hotbarreborn/icon.png",
 	"environment": "*",
 	"entrypoints": {
