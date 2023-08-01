@@ -17,6 +17,8 @@ public class Config {
 
     public int xOffsetHotbar, ySubtractHotbar;
 
+    public long animTimeHotbar = 1000L;
+
     private static final File FILE = new File(FabricLoader.getInstance().getConfigDir().toFile(), "hotbar reborn.json");
 
     public static final Config INSTANCE = read();

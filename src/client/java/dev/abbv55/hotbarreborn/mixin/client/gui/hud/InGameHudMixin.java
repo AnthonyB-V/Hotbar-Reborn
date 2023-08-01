@@ -31,7 +31,7 @@ public class InGameHudMixin {
         }else {
             if(Config.INSTANCE.animateSelector) {
                 selectorAnimation.update();
-                selectorAnimation.animate(((int) args.get(1)) + Config.INSTANCE.xOffsetHotbar, 1, Easings.QUAD_BOTH, true);
+                selectorAnimation.animate(((int) args.get(1)) + Config.INSTANCE.xOffsetHotbar, (double) Config.INSTANCE.animTimeHotbar / 1000L, Easings.QUAD_BOTH, true);
                 args.set(1, ((int) selectorAnimation.getValue()));
             }else {
                 args.set(1, (int) args.get(1) + Config.INSTANCE.xOffsetHotbar);
@@ -45,4 +45,41 @@ public class InGameHudMixin {
         args.set(1, (int) args.get(1) + Config.INSTANCE.xOffsetHotbar);
         args.set(2, (int) args.get(2) - Config.INSTANCE.ySubtractHotbar);
     }
+
+    @ModifyArgs(method = "renderMountJumpBar", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
+    private void modifyMountJumpBarXY(Args args) {
+        args.set(1, (int) args.get(1) + Config.INSTANCE.xOffsetHotbar);
+        args.set(2, (int) args.get(2) - Config.INSTANCE.ySubtractHotbar);
+    }
+
+    @ModifyArgs(method = "renderExperienceBar", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
+    private void modifyXPBarXY(Args args) {
+        args.set(1, (int) args.get(1) + Config.INSTANCE.xOffsetHotbar);
+        args.set(2, (int) args.get(2) - Config.INSTANCE.ySubtractHotbar);
+    }
+
+    @ModifyArgs(method = "renderExperienceBar", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawText(Lnet/minecraft/client/font/TextRenderer;Ljava/lang/String;IIIZ)I"))
+    private void modifyXPBarTextXY(Args args) {
+        args.set(2, (int) args.get(2) + Config.INSTANCE.xOffsetHotbar);
+        args.set(3, (int) args.get(3) - Config.INSTANCE.ySubtractHotbar);
+    }
+
+    @ModifyArgs(method = "renderHeldItemTooltip", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawTextWithShadow(Lnet/minecraft/client/font/TextRenderer;Lnet/minecraft/text/Text;III)I"))
+    private void modifyHeldItemTooltipXY(Args args) {
+        args.set(2, (int) args.get(2) + Config.INSTANCE.xOffsetHotbar);
+        args.set(3, (int) args.get(3) - Config.INSTANCE.ySubtractHotbar);
+    }
+
+    @ModifyArgs(method = "renderStatusBars", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
+    private void modifyStatusBarsXY(Args args) {
+        args.set(1, (int) args.get(1) + Config.INSTANCE.xOffsetHotbar);
+        args.set(2, (int) args.get(2) - Config.INSTANCE.ySubtractHotbar);
+    }
+
+    @ModifyArgs(method = "renderStatusBars", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/hud/InGameHud;renderHealthBar(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/entity/player/PlayerEntity;IIIIFIIIZ)V"))
+    private void modifyHealthBarXY(Args args) {
+        args.set(2, (int) args.get(2) + Config.INSTANCE.xOffsetHotbar);
+        args.set(3, (int) args.get(3) - Config.INSTANCE.ySubtractHotbar);
+    }
+
 }

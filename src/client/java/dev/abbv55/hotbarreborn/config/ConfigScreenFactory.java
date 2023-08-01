@@ -59,6 +59,12 @@ public class ConfigScreenFactory {
                 .setSaveConsumer(newValue -> currentConfig.animateSelector = newValue)
                 .build());
 
+        hotbarCategory.addEntry(entryBuilder.startLongSlider(Text.translatable("option.hotbarreborn.animTimeHot"), currentConfig.animTimeHotbar, 100, 3000)
+                .setDefaultValue(1000)
+                .setTooltip(Text.translatable("tooltip.hotbarreborn.animTimeHot"))
+                .setSaveConsumer(newValue -> currentConfig.animTimeHotbar = newValue)
+                .build());
+
         return configBuilder.build();
     }
 
