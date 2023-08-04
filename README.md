@@ -1,8 +1,5 @@
-# Fabric Example Mod
-
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+# Hotbar Reborn
+Hotbar Reborn is a Fabric mod for minecraft 1.20.1. It aims to improve customizability and looks of the hotbar and related widgets.
 
 ## License
 
